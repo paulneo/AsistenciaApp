@@ -1,0 +1,15 @@
+<p>
+  <strong>Periodo:</strong>
+  <%= @period.name%>
+</p>
+<p>
+  <strong>Fecha Inicio:</strong>
+  <%= @period.date_init%>
+</p>
+<p>
+  <strong>Fecha Fin:</strong>
+  <%= @period.date_finish%>
+</p>
+
+
+<p class="button"><%= link_to 'regresar', periods_path  ,class:"white"%></p>

@@ -1,0 +1,22 @@
+<div class="">
+  <%= form_for @person  do |f| %>
+    <div class="">
+      <%= f.label :Periodo %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="">
+      <%= f.label :Fecha_Inicio %>
+      <%= f.date_field :date_init %>
+    </div>
+    <div class="">
+      <%= f.label :Fecha_Final %>
+      <%= f.date_field :date_finish %>
+    </div>
+
+
+      <%= f.submit "Enviar" ,class:"" %>
+
+  <% end %>
+
+
+</div>

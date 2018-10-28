@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_28_025450) do
+ActiveRecord::Schema.define(version: 2018_10_28_040527) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,24 @@ ActiveRecord::Schema.define(version: 2018_10_28_025450) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "periods", force: :cascade do |t|
+    t.string "name"
+    t.datetime "date_init"
+    t.datetime "date_finish"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "student_enrollments", force: :cascade do |t|
+    t.bigint "person_id"
+    t.bigint "period_id"
+    t.string "hours"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["period_id"], name: "index_student_enrollments_on_period_id"
+    t.index ["person_id"], name: "index_student_enrollments_on_person_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -37,4 +55,6 @@ ActiveRecord::Schema.define(version: 2018_10_28_025450) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "student_enrollments", "people"
+  add_foreign_key "student_enrollments", "periods"
 end

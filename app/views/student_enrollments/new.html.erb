@@ -1,0 +1,18 @@
+<%= form_for @student_enrollment do |f|%>
+  <% unless @student_enrollment.errors.empty? %>
+    <ul>
+      <% @student_enrollment.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <div class="">
+    <%= f.label :Hora %>
+    <%= f.time_field:hours%>
+  </div>
+
+  <%= f.submit "Crear Matricula"%>
+
+<%end%>
+
+<p class="button"><%= link_to 'regresar', student_enrollments_path  ,class:"white"%></p>

@@ -9,6 +9,7 @@
       <th>Correo</th>
       <th>Dni</th>
       <th>Celular</th>
+      <th>fecha creat</th>
       <th>opciones</th>
     </tr>
   </thead>
@@ -20,6 +21,7 @@
         <td><%= f.email%> </td>
         <td><%= f.dni%> </td>
         <td><%= f.cellphone%> </td>
+
         <td>
           <%= link_to  person_path(id:f.id) do %>
               ver

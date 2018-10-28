@@ -1,0 +1,38 @@
+<li><%= link_to "Cerrar Sesion", destroy_user_session_path, method: :delete %> </li>
+
+<h1>Listado de Personas</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Periodo</th>
+      <th>Fecha Inicio</th>
+      <th>Fecha Fin</th>
+      <th>opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @periods.each do  |f|  %>
+      <tr>
+        <td><%= f.name%> </td>
+        <td><%= f.date_init%> </td>
+        <td><%= f.date_finish%> </td>
+        <td>
+          <%= link_to  period_path(id:f.id) do %>
+              ver
+            <% end %>
+            <%= link_to  edit_period_path(f) do  %>
+              editar
+            <% end %>
+            <%= link_to  period_path(f), method: :delete , data: { confirm: '¿Estas Seguro?' } do %>
+              eliminar
+            <% end %>
+        </td>
+      </tr>
+    <%end%>
+
+  </tbody>
+</table>
+
+<p><%= link_to new_period_path, class:"white" do %>
+      Nuevo
+<% end %> </p>
