@@ -1,0 +1,24 @@
+<%= form_for(@person) do |f|%>
+  <div class="">
+    <%= f.label :nombre %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="">
+    <%= f.label :Apellido %>
+    <%= f.text_field :lastName %>
+  </div>
+  <div class="">
+    <%= f.label :Dni %>
+    <%= f.text_field :dni %>
+
+  </div>
+  <div class="">
+    <%= f.label :Celular  %>
+    <%= f.text_field :cellphone %>
+  </div>
+
+  <%= f.submit "Crear Persona"%>
+
+<%end%>
+
+<p class="button"><%= link_to 'regresar', people_path  ,class:"white"%></p>
