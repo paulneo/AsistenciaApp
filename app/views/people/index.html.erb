@@ -1,9 +1,12 @@
+<li><%= link_to "Cerrar Sesion", destroy_user_session_path, method: :delete %> </li>
+
 <h1>Listado de Personas</h1>
 <table>
   <thead>
     <tr>
       <th>Nombre</th>
       <th>Apellido</th>
+      <th>Correo</th>
       <th>Dni</th>
       <th>Celular</th>
       <th>opciones</th>
@@ -14,6 +17,7 @@
       <tr>
         <td><%= f.name%> </td>
         <td><%= f.lastName%> </td>
+        <td><%= f.email%> </td>
         <td><%= f.dni%> </td>
         <td><%= f.cellphone%> </td>
         <td>

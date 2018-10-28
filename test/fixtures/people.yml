@@ -3,11 +3,13 @@
 one:
   name: MyString
   lastName: MyString
+  email: MyString
   dni: MyString
   cellphone: MyString
 
 two:
   name: MyString
   lastName: MyString
+  email: MyString
   dni: MyString
   cellphone: MyString
