@@ -3,12 +3,12 @@ class StudentEnrollmentsController < ApplicationController
 
   def index
     @student_enrollments = StudentEnrollment.all
-    @people = Person.all
-    @periods = Period.all
+
 
   end
   def show
-
+    @periods = Period.all
+    @people = Person.all
   end
 
   def new
@@ -45,11 +45,11 @@ class StudentEnrollmentsController < ApplicationController
   private
 
   def find_student_enrollment
-    @student_enrollment = Period.find(params[:id])
+    @student_enrollment = StudentEnrollment.find(params[:id])
   end
 
   def student_enrollment_params
-    params.require(:student_enrollment).permit(:hours)
+    params.require(:student_enrollment).permit(:person_id,:period_id,:hours)
   end
 
 end

@@ -1,0 +1,22 @@
+<div class="">
+  <%= form_for @student_enrollment  do |f| %>
+    <div class="field">
+     <%= f.label :persona %><br />
+     <%= f.select :person_id, Person.all.collect {|c| [ "#{c.name} #{c.lastName}", c.id ] } %>
+     </div>
+     <div class="field">
+      <%= f.label :periodo %><br />
+      <%= f.select :period_id, Period.all.collect {|c| [ c.name, c.id ] } %>
+    </div>
+    <div class="">
+      <%= f.label :Horas %>
+      <%= f.time_field:hours%>
+    </div>
+
+
+      <%= f.submit "Enviar" ,class:"" %>
+
+  <% end %>
+
+
+</div>

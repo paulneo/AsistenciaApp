@@ -1,0 +1,16 @@
+<p>
+  <strong>Persona:</strong>
+  <%= @student_enrollment.person.name%>
+  <%= @student_enrollment.person.lastName%>
+</p>
+<p>
+  <strong>Periodo:</strong>
+  <%= @student_enrollment.period.name%>
+</p>
+<p>
+  <strong>Horas:</strong>
+  <%= @student_enrollment.hours%>
+</p>
+
+
+<p class="button"><%= link_to 'regresar', student_enrollments_path  ,class:"white"%></p>
