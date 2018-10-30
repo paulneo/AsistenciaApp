@@ -4,11 +4,10 @@ class StudentEnrollmentsController < ApplicationController
   def index
     @student_enrollments = StudentEnrollment.all
 
-
   end
+
   def show
-    @periods = Period.all
-    @people = Person.all
+
   end
 
   def new

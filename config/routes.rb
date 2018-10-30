@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :periods
   resources :student_enrollments
   resources :events
+  resources :scheduled_events
 
 
 
