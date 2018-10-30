@@ -1,0 +1,39 @@
+<div class="">
+  <%= form_for @event  do |f| %>
+    <div class="">
+      <%= f.label :Nombre %>
+      <%= f.text_field:name%>
+    </div>
+    <div class="">
+      <%= f.label :Lugar %>
+      <%= f.text_field:place%>
+    </div>
+    <div class="">
+      <%= f.label :Tiempo_tolerancia %>
+      <%= f.text_field:time_tolerance%>
+    </div>
+    <div class="">
+      <%= f.label :state, "Activo", :value => "true"  %>
+      <%= f.radio_button :state, true%>
+      <%= f.label :state, "Inactivo", :value => "false" %>
+      <%= f.radio_button :state, false  %>
+    </div>
+    <div class="">
+      <%= f.label :Longitud %>
+      <%= f.text_field:longitude%>
+    </div>
+    <div class="">
+      <%= f.label :Latitud %>
+      <%= f.text_field:latitude%>
+    </div>
+    <div class="field">
+       <%= f.label :periodo %><br />
+       <%= f.select :period_id, Period.all.collect {|c| [ c.name, c.id ] } %>
+     </div>
+
+      <%= f.submit "Enviar" ,class:"" %>
+
+  <% end %>
+
+
+</div>

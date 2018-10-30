@@ -1,0 +1,50 @@
+
+
+<h1>Listado de eventos</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Lugar</th>
+      <th>Tiempo de Tolerancia</th>
+      <th>Estado</th>
+      <th>Longitud</th>
+      <th>Latitud</th>
+      <th>Periodo</th>
+      <th>opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+        <% @events.each do |f| %>
+          <tr>
+            <td><%= f.name%> </td>
+            <td><%= f.place%> </td>
+            <td><%= f.time_tolerance%> </td>
+            <td><%= f.state%> </td>
+            <td><%= f.longitude%> </td>
+            <td><%= f.latitude%> </td>
+            <td><%= f.period.name%> </td>
+
+            <td>
+              <%= link_to  event_path(id:f.id) do %>
+                  ver
+                <% end %>
+                <%= link_to edit_event_path(f) do  %>
+                  editar
+                <% end %>
+                <%= link_to  event_path(f), method: :delete , data: { confirm: '¿Estas Seguro?' } do %>
+                  eliminar
+                <% end %>
+            </td>
+          </tr>
+        <%end%>
+
+
+  </tbody>
+</table>
+<p><%= link_to new_event_path, class:"white" do %>
+      Nuevo
+  <% end %>
+</p>

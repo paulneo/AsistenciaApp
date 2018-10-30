@@ -1,7 +1,7 @@
 class CreateEvents < ActiveRecord::Migration[5.2]
   def change
     create_table :events do |t|
-      t.referenes :person
+      t.references :period, foreign_key: true
       t.string :name
       t.string :place
       t.integer :time_tolerance

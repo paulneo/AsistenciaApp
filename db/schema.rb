@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_28_040527) do
+ActiveRecord::Schema.define(version: 2018_10_30_063618) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "events", force: :cascade do |t|
+    t.bigint "period_id"
+    t.string "name"
+    t.string "place"
+    t.integer "time_tolerance"
+    t.boolean "state"
+    t.string "longitude"
+    t.string "latitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["period_id"], name: "index_events_on_period_id"
+  end
 
   create_table "people", force: :cascade do |t|
     t.string "name"
@@ -55,6 +68,7 @@ ActiveRecord::Schema.define(version: 2018_10_28_040527) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "events", "periods"
   add_foreign_key "student_enrollments", "people"
   add_foreign_key "student_enrollments", "periods"
 end

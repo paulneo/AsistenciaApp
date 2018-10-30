@@ -1,0 +1,31 @@
+<p>
+  <strong>Nombre del evento:</strong>
+  <%= @event.name%>
+</p>
+<p>
+  <strong>Lugar del evento:</strong>
+  <%= @event.place %>
+</p>
+<p>
+  <strong>Tiempo de tolerancia:</strong>
+  <%= @event.time_tolerance %>
+</p>
+<p>
+  <strong>Estado:</strong>
+  <%= @event.state %>
+</p>
+<p>
+  <strong>Longitud:</strong>
+  <%= @event.longitude %>
+</p>
+<p>
+  <strong>Latitud:</strong>
+  <%= @event.latitude %>
+</p>
+<p>
+  <strong>Periodo:</strong>
+  <%= @event.period.name%>
+</p>
+
+
+<p class="button"><%= link_to 'regresar', events_path  ,class:"white"%></p>
