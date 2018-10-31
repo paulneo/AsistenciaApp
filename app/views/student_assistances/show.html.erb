@@ -1,0 +1,48 @@
+<p>
+  <strong>Nombre:</strong>
+  <td><%= @student_assistance.student_enrollment.person.name%> </td>
+</p>
+<p>
+  <strong>Apellido:</strong>
+  <td><%= @student_assistance.student_enrollment.person.lastName%> </td>
+</p>
+<p>
+  <strong>Dni o Codigo:</strong>
+  <td><%= @student_assistance.student_enrollment.person.dni%> </td>
+</p>
+<p>
+  <strong>Periodo:</strong>
+  <td><%= @student_assistance.student_enrollment.period.name%> </td>
+</p>
+<p>
+  <strong>Nombre del evento:</strong>
+  <td><%= @student_assistance.scheduled_event.event.name%> </td>
+</p>
+<p>
+  <strong>Lugar:</strong>
+  <td><%= @student_assistance.scheduled_event.event.place%> </td>
+</p>
+<p>
+  <strong>Fecha:</strong>
+  <td><%= @student_assistance.scheduled_event.date%> </td>
+</p>
+<p>
+  <strong>Hora Inicio:</strong>
+  <td><%= @student_assistance.scheduled_event.hour_init%> </td>
+</p>
+<p>
+  <strong>Hora Fin:</strong>
+  <td><%= @student_assistance.scheduled_event.hour_finish%> </td>
+</p>
+<p>
+  <strong>Asistencia:</strong>
+  <td><%= @student_assistance.assistance%> </td>
+</p>
+<p>
+  <strong>Hora Registrada:</strong>
+  <td><%= @student_assistance.registered_time%> </td>
+</p>
+
+
+
+<p class="button"><%= link_to 'regresar', student_assistances_path  ,class:"white"%></p>

@@ -1,0 +1,22 @@
+<%= form_for @student_assistance do |f|%>
+
+  <div class="">
+    <%= f.label :Nombre %><br />
+    <%= f.select :student_enrollment_id, StudentEnrollment.all.collect {|c| [ "#{c.person.name}  #{c.person.lastName}", c.id ] } %>
+  </div>
+  <div class="">
+    <%= f.label :Periodo %><br />
+    <%= f.select :scheduled_event_id, ScheduledEvent.all.collect {|c| [ c.event.name, c.id ] } %>
+  </div>
+  <div class="">
+    <%= f.label :Asistencia %>
+    <%= f.text_field:assistance%>
+  </div>
+  <div class="">
+    <%= f.label :Hora_registrada %>
+    <%= f.time_field:registered_time %>
+  </div>
+
+  <%= f.submit "Crear Evento programado"%>
+
+<%end%>

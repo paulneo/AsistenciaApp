@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :student_enrollments
   resources :events
   resources :scheduled_events
+  resources :student_assistances
 
 
 

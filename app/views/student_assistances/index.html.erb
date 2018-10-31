@@ -1,0 +1,62 @@
+
+
+<h1>Listado de Asistencia</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Dni o Codigo</th>
+      <th>Periodo</th>
+      <th>Nombre del Evento</th>
+      <th>Lugar</th>
+      <th>Fecha del evento</th>
+      <th>Hora Inicio</th>
+      <th>Hora Fin</th>
+      <th>Asistencia</th>
+      <th>Hora Registrada</th>
+      <th>Opciones</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+
+
+        <% @student_assistances.each do |f| %>
+          <tr>
+            <td><%= f.student_enrollment.person.name%> </td>
+            <td><%= f.student_enrollment.person.lastName%> </td>
+            <td><%= f.student_enrollment.person.dni%> </td>
+            <td><%= f.student_enrollment.period.name%> </td>
+            <td><%= f.scheduled_event.event.name%> </td>
+            <td><%= f.scheduled_event.event.place%> </td>
+            <td><%= f.scheduled_event.date%> </td>
+            <td><%= f.scheduled_event.hour_init%> </td>
+            <td><%= f.scheduled_event.hour_finish%> </td>
+            <td><%= f.assistance%> </td>
+            <td><%= f.registered_time%> </td>
+
+
+
+            <td>
+              <%= link_to student_assistance_path(id:f.id) do %>
+                  ver
+                <% end %>
+                <%= link_to edit_student_assistance_path(f) do  %>
+                  editar
+                <% end %>
+                <%= link_to student_assistance_path(f), method: :delete , data: { confirm: '¿Estas Seguro?' } do %>
+                  eliminar
+                <% end %>
+            </td>
+          </tr>
+        <%end%>
+
+
+  </tbody>
+</table>
+<p><%= link_to new_student_assistance_path, class:"white" do %>
+      Nuevo
+  <% end %>
+</p>
