@@ -1,20 +1,24 @@
-<%= form_for @student_enrollment do |f|%>
+<%= form_for @scheduled_event do |f|%>
 
-  <div class="field">
-   <%= f.label :persona %><br />
-   <%= f.select :person_id, Person.all.collect {|c| [ "#{c.name} #{c.lastName}", c.id ] } %>
-   </div>
-   <div class="field">
-    <%= f.label :periodo %><br />
-    <%= f.select :period_id, Period.all.collect {|c| [ c.name, c.id ] } %>
+   <div class="">
+    <%= f.label :evento %><br />
+    <%= f.select :event_id, Event.all.collect {|c| [ c.name, c.id ] } %>
   </div>
   <div class="">
-    <%= f.label :Horas %>
-    <%= f.time_field:hours%>
+    <%= f.label :Fecha%>
+    <%= f.date_field:date%>
+  </div>
+  <div class="">
+    <%= f.label :Hora_Inicio %>
+    <%= f.time_field:hour_init%>
+  </div>
+  <div class="">
+    <%= f.label :Hora_Fin %>
+    <%= f.time_field:hour_finish %>
   </div>
 
-  <%= f.submit "Crear Matricula"%>
+  <%= f.submit "Crear Evento programado"%>
 
 <%end%>
 
-<p class="button"><%= link_to 'regresar', student_enrollments_path  ,class:"white"%></p>
+<p class="button"><%= link_to 'regresar', scheduled_events_path  ,class:"white"%></p>

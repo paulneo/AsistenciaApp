@@ -1,16 +1,19 @@
 <p>
-  <strong>Persona:</strong>
-  <%= @student_enrollment.person.name%>
-  <%= @student_enrollment.person.lastName%>
+  <strong>Evento:</strong>
+  <%= @scheduled_event.event.name%>
 </p>
 <p>
-  <strong>Periodo:</strong>
-  <%= @student_enrollment.period.name%>
+  <strong>Fecha:</strong>
+  <%= @scheduled_event.date%>
 </p>
 <p>
-  <strong>Horas:</strong>
-  <%= @student_enrollment.hours%>
+  <strong>Hora Inicio:</strong>
+  <%= @scheduled_event.hour_init%>
+</p>
+<p>
+  <strong>Hora Fin:</strong>
+  <%= @scheduled_event.hour_finish%>
 </p>
 
 
-<p class="button"><%= link_to 'regresar', student_enrollments_path  ,class:"white"%></p>
+<p class="button"><%= link_to 'regresar', scheduled_events_path  ,class:"white"%></p>

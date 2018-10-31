@@ -24,13 +24,13 @@
             <td><%= f.event.place%> </td>
 
             <td>
-              <%= link_to  student_enrollment_path(id:f.id) do %>
+              <%= link_to scheduled_event_path(id:f.id) do %>
                   ver
                 <% end %>
-                <%= link_to edit_student_enrollment_path(f) do  %>
+                <%= link_to edit_scheduled_event_path(f) do  %>
                   editar
                 <% end %>
-                <%= link_to  student_enrollment_path(f), method: :delete , data: { confirm: '¿Estas Seguro?' } do %>
+                <%= link_to  scheduled_event_path(f), method: :delete , data: { confirm: '¿Estas Seguro?' } do %>
                   eliminar
                 <% end %>
             </td>
@@ -40,7 +40,7 @@
 
   </tbody>
 </table>
-<p><%= link_to new_student_enrollment_path, class:"white" do %>
+<p><%= link_to new_scheduled_event_path, class:"white" do %>
       Nuevo
   <% end %>
 </p>
