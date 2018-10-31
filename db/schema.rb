@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_30_070526) do
+ActiveRecord::Schema.define(version: 2018_10_31_031324) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,17 @@ ActiveRecord::Schema.define(version: 2018_10_30_070526) do
     t.index ["event_id"], name: "index_scheduled_events_on_event_id"
   end
 
+  create_table "student_assistances", force: :cascade do |t|
+    t.bigint "scheduled_event_id"
+    t.bigint "student_enrollment_id"
+    t.datetime "registered_time"
+    t.string "assistance"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["scheduled_event_id"], name: "index_student_assistances_on_scheduled_event_id"
+    t.index ["student_enrollment_id"], name: "index_student_assistances_on_student_enrollment_id"
+  end
+
   create_table "student_enrollments", force: :cascade do |t|
     t.bigint "person_id"
     t.bigint "period_id"
@@ -80,6 +91,8 @@ ActiveRecord::Schema.define(version: 2018_10_30_070526) do
 
   add_foreign_key "events", "periods"
   add_foreign_key "scheduled_events", "events"
+  add_foreign_key "student_assistances", "scheduled_events"
+  add_foreign_key "student_assistances", "student_enrollments"
   add_foreign_key "student_enrollments", "people"
   add_foreign_key "student_enrollments", "periods"
 end

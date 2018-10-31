@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  scheduled_event: one
+  student_enrollment: one
+  registered_time: 2018-10-30 22:13:24
+  assistance: MyString
+
+two:
+  scheduled_event: two
+  student_enrollment: two
+  registered_time: 2018-10-30 22:13:24
+  assistance: MyString
