@@ -4,13 +4,14 @@ class PeopleController < ApplicationController
     def index
       if params[:q]
         @people = Person.search(params[:q]).order("created_at DESC")
+
       else
         @people = Person.all
       end
     end
 
     def show
-
+      @qr = RQRCode::QRCode.new(@person.name, size: 4)
     end
 
     def new
@@ -53,4 +54,5 @@ class PeopleController < ApplicationController
     def person_params
       params.require(:person).permit(:name,:lastName,:email, :dni,:cellphone)
     end
+
 end

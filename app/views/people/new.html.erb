@@ -1,4 +1,4 @@
-<%= form_for(@person) do |f|%>
+<%= form_for (@person) do |f|%>
   <div class="">
     <%= f.label :nombre %>
     <%= f.text_field :name %>
@@ -24,5 +24,7 @@
   <%= f.submit "Crear Persona"%>
 
 <%end%>
+
+
 
 <p class="button"><%= link_to 'regresar', people_path  ,class:"white"%></p>

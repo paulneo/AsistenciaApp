@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :events
   resources :scheduled_events
   resources :student_assistances
+  resources :qr_codes
 
 
 
