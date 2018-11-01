@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'qr_codes/new'
+  get 'qr_codes/create'
   devise_for :users
   root "people#index"
   resources :people
