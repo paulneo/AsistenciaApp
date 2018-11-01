@@ -8,7 +8,7 @@
   </div>
 </div>
 
-<h1>Listado de Personas</h1>
+<div class="container">
 <table>
   <thead>
     <tr>
@@ -29,7 +29,7 @@
         <td><%= f.dni%> </td>
         <td><%= f.cellphone%> </td>
 
-        <td>
+        <td class="option">
           <%= link_to  person_path(id:f.id) do %>
               ver
             <% end %>
@@ -45,6 +45,4 @@
 
   </tbody>
 </table>
-<p><%= link_to new_person_path, class:"white" do %>
-      Nuevo
-<% end %> </p>
+</div>
