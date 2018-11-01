@@ -11,7 +11,7 @@ class PeopleController < ApplicationController
     end
 
     def show
-      @qr = RQRCode::QRCode.new(@person.name, size: 4)
+      @qr = RQRCode::QRCode.new("#{@person.id}", size: 4, :level => :m, :mode => :number)
     end
 
     def new
