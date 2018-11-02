@@ -1,27 +1,27 @@
-<div class="">
+<div class="container margin-top50">
   <%= form_for @person  do |f| %>
-    <div class="">
+    <div class=" margin-top10 form">
       <%= f.label :Nombre %>
       <%= f.text_field :name %>
     </div>
-    <div class="">
+    <div class=" margin-top10 form">
       <%= f.label :Apellido %>
       <%= f.text_field :lastName %>
     </div>
-    <div class="">
+    <div class=" margin-top10 form">
       <%= f.label :Correo %>
       <%= f.text_field :email %>
     </div>
-    <div class="">
+    <div class=" margin-top10 form">
       <%= f.label :Dni %>
       <%= f.text_field :dni %>
     </div>
-    <div class="">
+    <div class=" margin-top10 form">
       <%= f.label :Celular  %>
       <%= f.text_field :cellphone %>
     </div>
 
-      <%= f.submit "Enviar" ,class:"" %>
+      <%= f.submit "Enviar" ,class:"button buttonForm" %>
 
   <% end %>
 
