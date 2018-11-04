@@ -1,5 +1,7 @@
 <div class="container margin-top50">
   <%= form_for @person  do |f| %>
+  <%= render "shared/error_messages", :target => @person %>
+  
     <div class=" margin-top10 form">
       <%= f.label :Nombre %>
       <%= f.text_field :name %>

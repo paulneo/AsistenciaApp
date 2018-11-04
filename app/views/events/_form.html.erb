@@ -1,5 +1,7 @@
 <div class="">
   <%= form_for @event  do |f| %>
+  <%= render "shared/error_messages", :target => @event %>
+
     <div class="">
       <%= f.label :Nombre %>
       <%= f.text_field:name%>

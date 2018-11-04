@@ -1,5 +1,7 @@
 <div class="">
   <%= form_for @student_enrollment  do |f| %>
+  <%= render "shared/error_messages", :target => @student_enrollment %>
+
     <div class="field">
      <%= f.label :persona %><br />
      <%= f.select :person_id, Person.all.collect {|c| [ "#{c.name} #{c.lastName}", c.id ] } %>

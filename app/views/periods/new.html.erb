@@ -1,4 +1,6 @@
 <%= form_for(@period) do |f|%>
+<%= render "shared/error_messages", :target => @period%>
+
   <div class="">
     <%= f.label :Periodo %>
     <%= f.text_field :name %>

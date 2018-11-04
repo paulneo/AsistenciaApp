@@ -1,4 +1,5 @@
 <%= form_for @student_enrollment do |f|%>
+  <%= render "shared/error_messages", :target => @student_enrollment %>
 
   <div class="field">
    <%= f.label :persona %><br />
