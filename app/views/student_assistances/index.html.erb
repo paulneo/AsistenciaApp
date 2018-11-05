@@ -1,6 +1,14 @@
+<div class="head ">
+  <div class="container headList">
+    <h1>Listado de Asistencia</h1>
+    <%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete , class:"white"%>
+  </div>
+</div>
 
-
-<h1>Listado de Asistencia</h1>
+<div class="container">
+  <%= link_to new_student_assistance_path, class:"" do %>
+    <i class="fa fa-plus-circle addStudent"></i> Nuevo
+  <% end %>
 <table>
   <thead>
     <tr>

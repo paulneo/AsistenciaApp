@@ -1,14 +1,14 @@
 <div class="head ">
   <div class="container headList">
     <h1>Lista de Estudiantes</h1>
-    <%= link_to new_person_path, class:"white" do %>
-      <i class="fa fa-plus-circle addStudent"></i> Nuevo
-    <% end %>
     <%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete , class:"white"%>
   </div>
 </div>
 
 <div class="container">
+  <%= link_to new_person_path, class:"" do %>
+    <i class="fa fa-plus-circle addStudent"></i> Nuevo
+  <% end %>
 <table>
   <thead>
     <tr>
