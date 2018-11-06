@@ -1,6 +1,24 @@
+<div class="head ">
+  <div class="container headList">
+    <h1>Listado de Eventos Programados</h1>
+    <%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete , class:"white"%>
+  </div>
+</div>
+<div class="container headList">
+  <ul class="menu">
+    <li><%= link_to 'Personas', people_path  ,class:""%></li>
+    <li><%= link_to 'Periodos', periods_path  ,class:""%></li>
+    <li><%= link_to 'Eventos', events_path  ,class:""%></li>
+    <li><%= link_to 'Matricula', student_enrollments_path  ,class:""%></li>
+    <li><%= link_to 'Asistencia', student_assistances_path  ,class:""%></li>
+    <li><%= link_to 'Evento Programado', scheduled_events_path  ,class:""%></li>
+  </ul>
+</div>
 
-
-<h1>Listado de Eventos programados</h1>
+<div class="container">
+  <%= link_to new_scheduled_event_path, class:"" do %>
+    <i class="fa fa-plus-circle addStudent"></i> Nuevo
+  <% end %>
 <table>
   <thead>
     <tr>
