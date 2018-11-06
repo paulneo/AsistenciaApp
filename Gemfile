@@ -29,6 +29,12 @@ gem 'rqrcode-with-patches', '~> 0.6.0'
 gem 'rqrcode', '~> 0.10.1'
 gem 'rqrcode_png'
 
+gem 'grape', '~> 1.1'
+
+gem 'rack-cors', '~> 1.0', '>= 1.0.2'
+gem 'grape-active_model_serializers', '~> 1.5', '>= 1.5.2'
+
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
