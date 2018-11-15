@@ -24,6 +24,7 @@
 <table>
   <thead>
     <tr>
+      <th>Nombre</th>
       <th>Fecha</th>
       <th>Hora Inicio</th>
       <th>Hora Fin</th>
@@ -37,6 +38,7 @@
 
         <% @scheduled_events.each do |f| %>
           <tr>
+            <td><%= f.name%> </td>
             <td><%= f.date%> </td>
             <td><%= f.hour_init%> </td>
             <td><%= f.hour_finish%> </td>

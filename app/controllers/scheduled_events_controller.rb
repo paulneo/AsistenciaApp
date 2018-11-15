@@ -48,6 +48,6 @@ class ScheduledEventsController < ApplicationController
     end
 
     def scheduled_event_params
-      params.require(:scheduled_event).permit(:event_id, :date, :hour_init, :hour_finish)
+      params.require(:scheduled_event).permit(:name,:event_id, :date, :hour_init, :hour_finish)
     end
 end

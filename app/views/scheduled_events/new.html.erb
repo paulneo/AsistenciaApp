@@ -1,6 +1,9 @@
 <%= form_for @scheduled_event do |f|%>
   <%= render "shared/error_messages", :target => @scheduled_event %>
-
+  <div class="">
+    <%= f.label :nombre %>
+    <%= f.text_field :name %>
+  </div>
    <div class="">
     <%= f.label :evento %><br />
     <%= f.select :event_id, Event.all.collect {|c| [ c.name, c.id ] } %>
