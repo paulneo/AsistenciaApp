@@ -7,7 +7,7 @@ class StudentEnrollmentsController < ApplicationController
   end
 
   def show
-
+    @qr = RQRCode::QRCode.new("#{@student_enrollment.person_id}", size: 4, :level => :m, :mode => :number)
   end
 
   def new

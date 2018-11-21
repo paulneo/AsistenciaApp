@@ -1,7 +1,12 @@
 <p>
-  <strong>Persona:</strong>
+  <strong>Alumno:</strong>
   <%= @student_enrollment.person.name%>
   <%= @student_enrollment.person.lastName%>
+</p>
+<p>
+  <strong>Codigo:</strong>
+  <%= @student_enrollment.person.dni%>
+
 </p>
 <p>
   <strong>Periodo:</strong>
@@ -12,5 +17,19 @@
   <%= @student_enrollment.hours%>
 </p>
 
-
+<table class="qr-code">
+<% @qr.modules.each_index do |x| %>
+  <tr>
+  <% @qr.modules.each_index do |y| %>
+   <% if @qr.dark?(x,y) %>
+    <td class="black"/>
+   <% else %>
+    <td class="white"/>
+   <% end %>
+  <% end %>
+  </tr>
+<% end %>
+</table>
+<br />
+<br />
 <p class="button"><%= link_to 'regresar', student_enrollments_path  ,class:"white"%></p>
