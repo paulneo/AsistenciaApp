@@ -6,7 +6,7 @@
     <%= f.select :student_enrollment_id, StudentEnrollment.all.collect {|c| [ "#{c.person.name}  #{c.person.lastName}", c.id ] } %>
   </div>
   <div class="">
-    <%= f.label :Periodo %><br />
+    <%= f.label :Evento_programado %><br />
     <%= f.select :scheduled_event_id, ScheduledEvent.all.collect {|c| [ c.event.name, c.id ] } %>
   </div>
   <div class="">
