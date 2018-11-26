@@ -24,11 +24,12 @@ module API
 
         desc 'Create a student_assistance'
         params do
-
+          
           # requires :registered_time, type: Date, desc: 'New student_assistance email'
           requires :student_enrollment_id, type: Integer, desc: 'New student_assistance first name'
           requires :scheduled_event_id, type: Integer, desc: 'New student_assistance last name'
           requires :assistance, type: String, desc: 'New student_assistance last name'
+
         end
         post do
           p params
