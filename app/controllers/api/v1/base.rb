@@ -7,6 +7,8 @@ module API
       mount API::V1::StudentEnrollments
       mount API::V1::Periods
       mount API::V1::StudentAssistances
+      mount API::V1::Users
+
     end
   end
 end

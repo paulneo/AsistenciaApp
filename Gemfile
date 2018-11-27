@@ -23,14 +23,17 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-gem 'devise', '~> 4.2'
+gem 'bcrypt', '~> 3.1.7'
+gem 'knock'
 
+gem 'devise', '~> 4.2'
+gem 'active_model_serializers', '~> 0.10.0'
+gem 'grape_devise_token_auth'
+gem 'simple_token_authentication', '~> 1.0' # see semver.org
 gem 'rqrcode-with-patches', '~> 0.6.0'
 gem 'rqrcode', '~> 0.10.1'
 gem 'rqrcode_png'
-
 gem 'grape', '~> 1.1'
-
 gem 'rack-cors', '~> 1.0', '>= 1.0.2'
 gem 'grape-active_model_serializers', '~> 1.5', '>= 1.5.2'
 
