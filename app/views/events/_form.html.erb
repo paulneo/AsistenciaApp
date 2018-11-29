@@ -1,4 +1,4 @@
-<div class="">
+<div class="formulario">
   <%= form_for @event  do |f| %>
   <%= render "shared/error_messages", :target => @event %>
 
@@ -32,10 +32,11 @@
        <%= f.label :periodo %><br />
        <%= f.select :period_id, Period.all.collect {|c| [ c.name, c.id ] } %>
      </div>
+     <div class="">
+         <%= f.submit "Enviar" ,class:"" %>
+     </div>
 
-      <%= f.submit "Enviar" ,class:"" %>
 
   <% end %>
-
 
 </div>

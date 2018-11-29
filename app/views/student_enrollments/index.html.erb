@@ -17,9 +17,7 @@
   </div>
 </div>
 <div class="container">
-  <%= link_to new_student_enrollment_path, class:"" do %>
-    <i class="fa fa-plus-circle addStudent"></i> Nuevo
-  <% end %>
+
 <table>
   <thead>
     <tr>
@@ -47,13 +45,13 @@
             <td><%= f.hours%> </td>
             <td>
               <%= link_to  student_enrollment_path(id:f.id) do %>
-                  ver
+                  Ver
                 <% end %>
                 <%= link_to edit_student_enrollment_path(f) do  %>
-                  editar
+                  Editar
                 <% end %>
                 <%= link_to  student_enrollment_path(f), method: :delete , data: { confirm: '¿Estas Seguro?' } do %>
-                  eliminar
+                  Eliminar
                 <% end %>
             </td>
           </tr>
@@ -62,7 +60,7 @@
 
   </tbody>
 </table>
-<p><%= link_to new_student_enrollment_path, class:"white" do %>
+<p><%= link_to new_student_enrollment_path, class:"boton" do %>
       Nuevo
   <% end %>
 </p>

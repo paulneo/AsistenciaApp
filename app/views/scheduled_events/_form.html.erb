@@ -1,5 +1,5 @@
+<div class="formulario">
 <%= form_for @scheduled_event do |f|%>
-  <%= render "shared/error_messages", :target => @scheduled_event %>
   <div class="">
     <%= f.label :nombre %>
     <%= f.text_field :name %>
@@ -24,3 +24,4 @@
   <%= f.submit "Crear Evento programado"%>
 
 <%end%>
+</div>

@@ -1,29 +1,29 @@
-<div class="container margin-top50">
+<div class="formulario">
   <%= form_for @person  do |f| %>
   <%= render "shared/error_messages", :target => @person %>
-  
-    <div class=" margin-top10 form">
+
+    <div class="">
       <%= f.label :Nombre %>
       <%= f.text_field :name %>
     </div>
-    <div class=" margin-top10 form">
+    <div class="">
       <%= f.label :Apellido %>
       <%= f.text_field :lastName %>
     </div>
-    <div class=" margin-top10 form">
+    <div class="">
       <%= f.label :Correo %>
       <%= f.text_field :email %>
     </div>
-    <div class=" margin-top10 form">
+    <div class="">
       <%= f.label :Dni %>
       <%= f.text_field :dni %>
     </div>
-    <div class=" margin-top10 form">
+    <div class="">
       <%= f.label :Celular  %>
       <%= f.text_field :cellphone %>
     </div>
 
-      <%= f.submit "Enviar" ,class:"button buttonForm" %>
+      <%= f.submit "Enviar" ,class:"" %>
 
   <% end %>
 
